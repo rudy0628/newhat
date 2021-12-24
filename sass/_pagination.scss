@@ -1,0 +1,38 @@
+.pagination {
+	max-width: 120rem;
+	margin: 3.2rem auto;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& > *:not(:last-child) {
+		margin-right: 1.6rem;
+	}
+
+	&__page {
+		font-size: 1.8rem;
+	}
+
+	&__btn {
+		background-color: $color-primary;
+		color: #fff;
+		border: 3px solid $color-primary;
+		border-radius: 50%;
+		height: 3.6rem;
+		width: 3.6rem;
+		cursor: pointer;
+		transition: all 0.2s;
+
+		&:hover,
+		&:hover {
+			background-color: transparent;
+			color: $color-primary;
+		}
+
+		&--hide {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}

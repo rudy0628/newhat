@@ -1,0 +1,42 @@
+// COLOR VARIABLES
+$color-primary: #22b8cf;
+$color-primary-dark: #15aabf;
+
+$color-primary-light: #e3fafc;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #555;
+
+$bp-largest: 75em; //1200px
+$bp-large: 56.25em; //900px
+$bp-medium: 43.75em; //700px
+$bp-small: 31.25em; //500px
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	overflow-x: hidden;
+
+	@media only screen and (max-width: $bp-largest) {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: sans-serif;
+	color: $color-grey-dark-1;
+	font-weight: 400;
+	line-height: 1.6;
+	overflow-x: hidden;
+}

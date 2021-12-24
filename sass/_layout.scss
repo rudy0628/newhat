@@ -1,0 +1,43 @@
+.container {
+}
+
+.headline {
+	height: 100vh;
+	margin-bottom: 3.2rem;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	overflow: hidden;
+
+	@media only screen and (max-width: $bp-large) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(12, 1fr);
+	}
+
+	@media only screen and (max-width: $bp-medium) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(24, 1fr);
+		min-height: 135vh;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: auto;
+		height: auto;
+	}
+}
+
+.sticky .container {
+	margin-top: 8rem;
+}
+
+.more {
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 3.2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-template-rows: repeat(auto-fit, 50vh);
+	grid-gap: 2.4rem;
+}

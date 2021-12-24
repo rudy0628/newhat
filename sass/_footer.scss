@@ -1,0 +1,15 @@
+.footer {
+	height: 7rem;
+	padding: 0 3.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__logo {
+		display: block;
+		height: 100%;
+	}
+	&__text {
+		font-size: 1.4rem;
+	}
+}

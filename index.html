@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<script defer src="https://kit.fontawesome.com/1b27502aad.js" crossorigin="anonymous"></script>
+		<script defer src="./js/controller.js"></script>
+		<title>newhat-a modern news website</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__logo-box">
+				<img src="img/logo_transparent.png" alt="logo" class="header__logo" />
+			</div>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#" class="nav__link">頭條</a>
+					</li>
+					<li class="nav__item">
+						<a href="#entertainment" class="nav__link">娛樂</a>
+					</li>
+					<li class="nav__item">
+						<a href="#sports" class="nav__link">運動</a>
+					</li>
+					<li class="nav__item">
+						<a href="#business" class="nav__link">商業</a>
+					</li>
+					<li class="nav__item">
+						<a href="#technology" class="nav__link">科技</a>
+					</li>
+				</ul>
+			</nav>
+
+			<button class="header__mobile-btn">
+				<ion-icon name="menu-outline" class="header__mobile-icon"></ion-icon>
+				<ion-icon name="close-outline" class="header__mobile-icon"></ion-icon>
+			</button>
+		</header>
+		<main class="container">
+			<section class="headline">
+				<!-- <div class="headline-news headline-news--1">
+					<img src="img/news-1.png" alt="News 1" class="headline-news__img" />
+					<div class="headline-news__text-box">
+						<h3 class="subheading">Gamebase.com.tw</h3>
+						<a href="#" class="headline-news__link">連結</a>
+						<h2 class="heading-secondary headline-news__title">《FFVII 重製版》PS4 免費版也將支援免費升級PS5 版本！「尤菲之章」DLC 章節75 折優惠即將開跑 - 遊戲基地</h2>
+					</div>
+				</div> -->
+			</section>
+
+			<p class="breakline">看更多新聞</p>
+
+			<section class="more">
+				<!-- <div class="more-news">
+					<div class="more-news__img-box">
+						<img src="img/news-1.png" alt="Logo 1" class="more-news__img" />
+					</div>
+					<div class="more-news__text-box">
+						<h3 class="subheading">Gamebase.com.tw</h3>
+						<a href="#" class="more-news__link">連結</a>
+						<h2 class="heading-secondary more-news__title">《FFVII 重製版》PS4 免費版也將支援免費升級PS5 版本！「尤菲之章」DLC 章節75 折優惠即將開跑 - 遊戲基地</h2>
+					</div>
+				</div> -->
+			</section>
+
+			<div class="pagination">
+				<button class="pagination__btn pagination__btn--hide" data-goto="1">&leftarrow;</button>
+				<p class="pagination__page">1</p>
+				<button class="pagination__btn" data-goto="2">&rightarrow;</button>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<img src="img/logo_transparent.png" alt="logo" class="footer__logo" />
+			<p class="footer__text">&copy; Copyright 2021 by Rudy Yeh</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+.subheading {
+	margin-bottom: 1.2rem;
+	color: $color-primary;
+}
+
+.heading {
+	&-secondary {
+		font-size: 1.4rem;
+		margin-bottom: 1.2rem;
+	}
+}
+
+.breakline {
+	display: grid;
+	grid-template-columns: 1fr max-content 1fr;
+	grid-column-gap: 1.5rem;
+	align-items: center;
+
+	font-size: 1.6rem;
+	color: $color-primary;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 3.2rem auto;
+	width: 90%;
+
+	&::before,
+	&::after {
+		content: '';
+		height: 2px;
+		display: block;
+		background-color: currentColor;
+	}
+}
