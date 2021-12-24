@@ -18,3 +18,26 @@
 		transform: rotate(360deg);
 	}
 }
+
+.error {
+	margin: 4.4rem 4.4rem 0;
+	padding: 2.4rem;
+	grid-column: 1 / -1;
+	background-color: $color-error;
+	border: 3px solid $color-error-border;
+	border-radius: 9px;
+	height: 8rem;
+
+	display: flex;
+	align-items: center;
+
+	&__icon {
+		height: 3rem;
+		width: 3rem;
+		margin-right: 1.6rem;
+	}
+
+	&__message {
+		font-size: 2rem;
+	}
+}

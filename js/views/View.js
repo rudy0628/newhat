@@ -27,7 +27,8 @@ export default class View {
 	renderError(message = this._errorMessage) {
 		const markup = `
 		<div class="error">
-				<p>${message}</p>
+			<ion-icon name="close-circle-outline" class="error__icon"></ion-icon>
+			<p class="error__message">${message}</p>
 		</div>
 		`;
 
