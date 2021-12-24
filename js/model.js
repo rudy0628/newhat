@@ -12,10 +12,14 @@ export const state = {
 };
 
 export const loadNews = async function (category = '') {
-	const res = await fetch(`https://newsapi.org/v2/top-headlines?country=tw&apiKey=6bd45246dbee4c06be01a87c7dedc6e9&pageSize=30&category=${category}`);
-	const data = await res.json();
-	state.headlineNews = data.articles.slice(0, 10);
-	state.moreNews.result = data.articles.slice(10);
+	try {
+		const res = await fetch(`https://newsapi.org/v2/top-headlines?country=tw&apiKey=6bd45246dbee4c06be01a87c7dedc6e9&pageSize=30&category=${category}`);
+		const data = await res.json();
+		state.headlineNews = data.articles.slice(0, 10);
+		state.moreNews.result = data.articles.slice(10);
+	} catch (e) {
+		throw e;
+	}
 };
 
 export const getSearchResultPage = function (page = state.moreNews.newsPage) {

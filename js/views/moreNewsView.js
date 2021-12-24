@@ -2,6 +2,8 @@ import View from './View.js';
 
 class MoreNewsView extends View {
 	_parentEl = document.querySelector('.more');
+	_errorMessage = 'Get news data failed, please reload page!';
+
 	_generateMarkUp() {
 		return `${this._data
 			.map(

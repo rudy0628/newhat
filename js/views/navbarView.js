@@ -1,7 +1,7 @@
 class NavbarView {
 	_parentEl = document.querySelector('.nav__list');
 
-	addHandlerClick(handler) {
+	addHandlerClick(handlerLoadNews, handlerPagination) {
 		this._parentEl.addEventListener('click', function (e) {
 			const link = e.target.closest('.nav__link');
 			if (!link) return;
@@ -9,7 +9,8 @@ class NavbarView {
 			headerEl.classList.remove('nav-open');
 
 			const category = link.getAttribute('href').slice(1);
-			handler(category);
+			handlerLoadNews(category);
+			handlerPagination(1);
 		});
 	}
 }

@@ -10,14 +10,19 @@ import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 
 const controlLoadNews = async function (category) {
-	// 0. render spinner
-	headlineNewsView.renderSpinner();
-	moreNewsView.renderSpinner();
-	// 1. loading news
-	await model.loadNews(category);
-	// 2. render news
-	headlineNewsView.render(model.state.headlineNews);
-	moreNewsView.render(model.getSearchResultPage());
+	try {
+		// 0. render spinner
+		headlineNewsView.renderSpinner();
+		moreNewsView.renderSpinner();
+		// 1. loading news
+		await model.loadNews(category);
+		// 2. render news
+		headlineNewsView.render(model.state.headlineNews);
+		moreNewsView.render(model.getSearchResultPage());
+	} catch (e) {
+		headlineNewsView.renderError();
+		moreNewsView.renderError();
+	}
 };
 
 const controlPagination = function (goToPage) {
@@ -32,7 +37,7 @@ const controlPagination = function (goToPage) {
 const init = function () {
 	headlineNewsView.addHandlerRender(controlLoadNews);
 	paginationView.addHandlerClick(controlPagination);
-	navbarView.addHandlerClick(controlLoadNews);
+	navbarView.addHandlerClick(controlLoadNews, controlPagination);
 	layoutView.mobileNavClick();
 	layoutView.stickyNav();
 };

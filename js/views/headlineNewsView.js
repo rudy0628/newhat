@@ -2,6 +2,7 @@ import View from './View';
 
 class HeadlineNewsView extends View {
 	_parentEl = document.querySelector('.headline');
+	_errorMessage = 'Get news data failed, please reload page!';
 
 	addHandlerRender(handler) {
 		window.addEventListener('load', function () {
